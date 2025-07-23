@@ -40,19 +40,19 @@ A comprehensive web application for managing GDG events with role-based authenti
 ## Demo Credentials
 
 ### Email-based Authentication:
-\`\`\`
+```
 Organizer: organizer@gdg.dev / dev123
 Teacher: teacher@gdg.dev / dev123
 Community: community@gdg.dev / dev123
-\`\`\`
+```
 
 ### Student Phone Authentication:
-\`\`\`
+```
 Phone: +91 9999999999 (or 9999999999)
 OTP: 000000
 Roll Number: Any (e.g., 21CS001)
 Name: Any name
-\`\`\`
+```
 
 ## Tech Stack
 
@@ -67,37 +67,37 @@ Name: Any name
 ## Getting Started
 
 1. **Clone the repository**
-   \`\`\`bash
+   ```bash
    git clone <repository-url>
    cd gdg-event-companion
-   \`\`\`
+   ```
 
 2. **Install dependencies**
-   \`\`\`bash
+   ```bash
    npm install
-   \`\`\`
+   ```
 
 3. **Set up Gemini AI API Key**
-   \`\`\`bash
+   ```bash
    # Create .env.local file
    cp .env.example .env.local
    
    # Edit .env.local and add your Gemini API key
    # Get your API key from: https://makersuite.google.com/app/apikey
    NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key_here
-   \`\`\`
+   ```
 
 4. **Run development server**
-   \`\`\`bash
+   ```bash
    npm run dev
-   \`\`\`
+   ```
 
 5. **Open browser**
    Navigate to `http://localhost:3000`
 
 ## Project Structure
 
-\`\`\`
+```
 app/
 ├── attendance/              # QR attendance system
 │   ├── qr-scanner.tsx      # Student QR scanning
@@ -128,7 +128,7 @@ lib/
 ├── gemini.ts              # AI service integration
 ├── mock-data.ts           # Development data
 └── utils.ts               # Utility functions
-\`\`\`
+```
 
 ## Role-Based Access
 
@@ -170,17 +170,17 @@ lib/
 ## Key Components
 
 ### Authentication (`lib/auth.ts`)
-\`\`\`typescript
+```typescript
 // Phone OTP for students
 await authService.sendOTP(phoneNumber)
 await authService.verifyOTP(confirmationResult, otp)
 
 // Email/password for other roles
 await authService.signInWithEmail(email, password)
-\`\`\`
+```
 
 ### Attendance System (`lib/attendance-service.ts`)
-\`\`\`typescript
+```typescript
 // Create attendance window (Organizers)
 await attendanceService.shareAttendanceWithTeachers(sessionId, organizerUid, sessionDetails)
 
@@ -189,7 +189,7 @@ await authService.markAttendance(sessionId, studentUid)
 
 // View shared attendance (Teachers)
 await attendanceService.getSessionAttendanceRecords(sessionId)
-\`\`\`
+```
 
 ### QR Code Flow
 1. **Organizer** creates attendance window → generates QR code
@@ -245,8 +245,6 @@ MIT License - see LICENSE file for details.
 
 If you have any questions or need help:
 
-- 📧 **Email**: support@gdgeventcompanion.com
-- 💬 **Discord**: [Join our community](https://discord.gg/gdg-event-companion)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/gdg-event-companion/issues)
-- 📖 **Documentation**: [Full Documentation](https://docs.gdgeventcompanion.com)
-# Event-management-app
+- 📧 **Email**: shashankshekhar8534@gmail.com)
+
+
